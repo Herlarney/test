@@ -58,7 +58,7 @@ class CallPageView extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10),
                                 color: Colors.black12.withOpacity(0.7)),
                             child:  Padding(
-                              padding: EdgeInsets.all(8.0),
+                              padding: EdgeInsets.symmetric(horizontal:8.0, vertical:14),
                               child: Row(
                                 children: [
                                    Image.asset('images/wav.png'),
@@ -117,7 +117,7 @@ class CallPageView extends StatelessWidget {
               Container(
                 height: MediaQuery.of(context).size.height*0.094,
                 decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(

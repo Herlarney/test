@@ -171,7 +171,7 @@ class ChatPageView extends StatelessWidget {
                     : const SizedBox.shrink(),
                 viewModel.view == Views.chat
                     ? const SizedBox(height: 7)
-                    : SizedBox.shrink(),
+                    : const SizedBox.shrink(),
                 viewModel.view == Views.chat
                     ? Expanded(
                         child: ListView(
@@ -214,11 +214,11 @@ class ChatPageView extends StatelessWidget {
                         child: ListView.builder(
                           itemCount: viewModel.participant.length,
                           itemBuilder: (context, index) => Container(
-                              margin: EdgeInsetsDirectional.all(7),
-                              decoration: BoxDecoration(
+                              margin: const EdgeInsetsDirectional.all(7),
+                              decoration: const BoxDecoration(
                                 color: Colors.white,
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
+                                    BorderRadius.all(Radius.circular(30)),
                               ),
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -233,7 +233,7 @@ class ChatPageView extends StatelessWidget {
                                               .participant[index].image!),
                                           backgroundColor: Colors.transparent,
                                         ),
-                                        SizedBox(width: 20,),
+                                        const SizedBox(width: 20,),
                                         Text(
                                             viewModel.participant[index].name!),
                                       ],
@@ -244,7 +244,7 @@ class ChatPageView extends StatelessWidget {
                                         color:
                                             viewModel.participant[index].color,
                                       ),
-                                      SizedBox(width: 10,),
+                                      const SizedBox(width: 10,),
                                       Icon(
                                         Icons.video_camera_back_outlined,
                                         color: viewModel
@@ -286,7 +286,7 @@ class ChatPageView extends StatelessWidget {
                           ],
                         ),
                       )
-                    : SizedBox.shrink(),
+                    : const SizedBox.shrink(),
                 viewModel.view == Views.chat
                     ? Container(
                         width: double.infinity,
@@ -296,7 +296,7 @@ class ChatPageView extends StatelessWidget {
                                 BorderRadius.all(Radius.circular(10))),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 18.0, vertical: 10),
+                              horizontal: 10.0, vertical: 4),
                           child: Row(children: [
                             Image.asset('images/Vector.png'),
                             const SizedBox(
@@ -330,18 +330,22 @@ class ChatPageView extends StatelessWidget {
                             const SizedBox(
                               width: 10,
                             ),
-                            Container(
-                                height: 40,
-                                width: 40,
-                                decoration: const BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(10))),
-                                child: Image.asset('images/Vector1.png')),
+                            Spacer(),
+                            Padding(
+                              padding: const EdgeInsets.only(right:14.0),
+                              child: Container(
+                                  height: 40,
+                                  width: 40,
+                                  decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(10))),
+                                  child: Image.asset('images/Vector1.png')),
+                            ),
                           ]),
                         ),
                       )
-                    : SizedBox.shrink(),
+                    : const SizedBox.shrink(),
               ],
             ),
           ),
@@ -445,13 +449,13 @@ class ChatCard extends StatelessWidget {
                         height: 4,
                       ),
                       Container(
-                        decoration: const BoxDecoration(
-                          borderRadius: BorderRadius.only(
+                        decoration:  BoxDecoration(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
+                            topLeft: Radius.circular(10),
                             bottomRight: Radius.circular(10),
                           ),
-                          color: Color(0xFF131B26),
+                          color: const Color(0xFF131B26).withOpacity(0.6),
                         ),
                         child: Padding(
                           padding: const EdgeInsets.only(
